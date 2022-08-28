@@ -17,6 +17,12 @@ const fetchSongFailure = error => ({
     payload: {error}
 })
 
+const addCart = (id, num) => ({
+    type: actionType.ADD_CART,
+    payload: {id, num}
+})
+
+
 const fetchData = () => {
     console.log("fetch data")
     return async dispatch => {
@@ -34,5 +40,6 @@ export default {
     fetchData,
     fetchSongBegin,
     fetchSongSuccess,
-    fetchSongFailure
+    fetchSongFailure,
+    addCart
 }

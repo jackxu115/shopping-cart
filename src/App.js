@@ -1,5 +1,5 @@
 import {NavBar} from "./component/NavBar";
-import {Navigate, Route, Routes, useNavigate} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import "./App.scss";
 import {Home} from "./component/Home";
 import {Shop} from "./component/Shop";
@@ -7,6 +7,7 @@ import {Music} from "./component/Music";
 import {useDispatch} from "react-redux"
 import {useEffect} from "react";
 import actions from "./actions";
+import {Cart} from "./component/Cart";
 
 
 function App() {
@@ -28,8 +29,8 @@ function App() {
                 <Route path="/shop" element={<Shop/>}/>
                 <Route path="/shop/:name" element={<Music/>}/>
                 <Route path="/" element={<Navigate to="/home" />}/>
+                <Route path="/cart" element={<Cart />} />
             </Routes>
-
         </div>
     );
 }

@@ -1,10 +1,23 @@
 import {useLocation, useParams} from "react-router-dom";
 import "../style/Music.scss"
+import {useDispatch} from "react-redux";
+import actions from "../actions";
+import {useState} from "react";
 
 
 export const Music = () => {
+
+    const [num, setNum] = useState(1)
+
+    const cbInput = event => {
+        const num = parseInt(event.target.value)
+        setNum(num)
+    }
+
     const {state} = useLocation()
     console.log('state', state.song)
+
+    const dispatch = useDispatch()
 
     return (
         <div className="Music">
@@ -21,10 +34,12 @@ export const Music = () => {
             <div className="Music_Button">
                 <div className="Music_Button_Qty">
                     <label htmlFor="quantity">Quantity:</label>
-                    <input type="number" min="1" max="100"/>
+                    <input type="number" min="1" max="100" defaultValue={1} onChange={cbInput}/>
                 </div>
                 <div className="Music_Button_Cart">
-                    <button>Add to cart</button>
+                    <button
+                        onClick={() => dispatch(actions.songActions.addCart(state.song.id, num))}
+                    >Add to cart</button>
                 </div>
             </div>
         </div>
