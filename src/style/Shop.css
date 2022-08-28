@@ -1,0 +1,12 @@
+.Shop {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  max-width: 1200px;
+  padding: 20px;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+/*# sourceMappingURL=Shop.css.map */

@@ -1,0 +1,64 @@
+.Music {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: 50px auto;
+  align-items: start;
+}
+.Music_Image {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.Music_Content {
+  display: flex;
+  flex-direction: column;
+  color: #1e2022;
+}
+.Music_Content_Title {
+  font-size: 40px;
+  font-weight: 600;
+}
+.Music_Content_Artist {
+  font-size: 20px;
+}
+.Music_Content_Artist span {
+  font-size: 15px;
+  font-style: italic;
+  margin-right: 10px;
+}
+.Music_Content_Length {
+  font-size: 20px;
+}
+.Music_Content_Price {
+  font-size: 30px;
+  font-weight: 800;
+}
+.Music_Button {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+}
+.Music_Button_Qty {
+  margin: 20px;
+}
+.Music_Button_Qty label {
+  color: #1e2022;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.Music_Button_Cart button {
+  background-color: #fce38a;
+  border-radius: 20px;
+  padding: 10px 50px;
+  border: none;
+}
+.Music_Button_Cart button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+/*# sourceMappingURL=Music.css.map */

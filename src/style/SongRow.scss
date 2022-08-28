@@ -1,0 +1,43 @@
+.songRow {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 250px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 0;
+
+    &_Image {
+        box-shadow: 0 0 10px 2px #888888;
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+
+    &_Content {
+        color: #1e2022;
+        display: flex;
+        flex-direction: column;
+        &_Title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        &_Artist {
+            font-size: 14px;
+        }
+    }
+
+    &_Price {
+        color: #1e2022;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+
+
+
+
+}
