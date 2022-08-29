@@ -1,0 +1,42 @@
+.CartRow {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: 2fr 3fr 1fr;
+  justify-items: start;
+  margin: 10px 0 10px 20px;
+}
+.CartRow_Info {
+  display: flex;
+  flex-direction: column;
+}
+.CartRow_Info_Title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.CartRow_Info_Artist {
+  font-size: 14px;
+  font-style: italic;
+}
+.CartRow_Info_Num {
+  font-size: 16px;
+}
+.CartRow_Info_DeleteBtn {
+  margin-top: 10px;
+}
+.CartRow_Info_DeleteBtn button {
+  background-color: #fb9039;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+}
+.CartRow_Info_DeleteBtn button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.CartRow_Cost {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=CartRow.css.map */

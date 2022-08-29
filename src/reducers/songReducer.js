@@ -6,11 +6,14 @@ const initState = {
     loading: false,
     error: null,
     totalNum: 0,
+    totalCost: 0
 }
 
 export const songReducer = (state = initState, action) => {
 
     let newData = [...state.rawData]
+    let total = state.totalNum
+    let totalCost = state.totalCost
 
     switch (action.type) {
         case actionType.FETCH_ALL_SONGS_BEGIN:
@@ -27,11 +30,39 @@ export const songReducer = (state = initState, action) => {
 
         case actionType.ADD_CART:
             console.log(`[reducer] ${actionType.ADD_CART}`, action.payload)
+
             const id = action.payload.id
+
             newData = newData.map(element =>
-                element.id === id ? {...element, cart: true, num: action.payload.num} : element)
-            let total = state.totalNum + action.payload.num
-            return {...state, rawData: newData, totalNum: total}
+                element.id === id ? {
+                    ...element,
+                    cart: true,
+                    num: action.payload.num + element.num,
+                    subtotal: element.subtotal + action.payload.num * element.price
+                } : element)
+
+            total = state.totalNum + action.payload.num
+            totalCost = state.totalCost + action.payload.num * state.rawData[id - 1].price
+
+            return {...state, rawData: newData, totalNum: total, totalCost: totalCost}
+
+        case actionType.DELETE_CART:
+            console.log(`[reducer] ${actionType.DELETE_CART}`, action.payload)
+
+            const delId = action.payload.id
+
+            newData = newData.map(element =>
+                element.id === delId ? {
+                    ...element,
+                    cart: false,
+                    num: 0,
+                    subtotal: 0
+                } : element)
+
+            total = state.totalNum - action.payload.num
+            totalCost = state.totalCost - action.payload.cost
+
+            return {...state, rawData: newData, totalNum: total, totalCost: totalCost}
 
         default:
             return state

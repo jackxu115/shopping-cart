@@ -1,0 +1,63 @@
+.Cart {
+  display: flex;
+  flex-direction: row;
+  color: #1e2022;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 40px auto;
+
+  &_Shop {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 600px;
+
+    &_Header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &_Heading {
+        font-size: 40px;
+        font-weight: 800;
+      }
+
+      &_Price {
+        margin-top: 30px;
+        font-style: italic;
+      }
+    }
+  }
+
+  &_Checkout {
+    margin-left: 20px;
+
+    &_Subtotal {
+
+    }
+
+    &_CheckoutBtn {
+      margin-top: 20px;
+
+      &_Button {
+        background-color: #fec72e;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 15px;
+
+        &:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+          transition: all ease-in-out 0.3s;
+        }
+        &_Link {
+          text-decoration: none;
+          &:visited {
+            color: #1e2022;
+          }
+
+        }
+      }
+    }
+  }
+}

@@ -15,7 +15,6 @@ export const Music = () => {
     }
 
     const {state} = useLocation()
-    console.log('state', state.song)
 
     const dispatch = useDispatch()
 

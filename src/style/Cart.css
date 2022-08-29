@@ -1,3 +1,52 @@
-
+.Cart {
+  display: flex;
+  flex-direction: row;
+  color: #1e2022;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 40px auto;
+}
+.Cart_Shop {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 600px;
+}
+.Cart_Shop_Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Cart_Shop_Header_Heading {
+  font-size: 40px;
+  font-weight: 800;
+}
+.Cart_Shop_Header_Price {
+  margin-top: 30px;
+  font-style: italic;
+}
+.Cart_Checkout {
+  margin-left: 20px;
+}
+.Cart_Checkout_CheckoutBtn {
+  margin-top: 20px;
+}
+.Cart_Checkout_CheckoutBtn_Button {
+  background-color: #fec72e;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+}
+.Cart_Checkout_CheckoutBtn_Button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.Cart_Checkout_CheckoutBtn_Button_Link {
+  text-decoration: none;
+}
+.Cart_Checkout_CheckoutBtn_Button_Link:visited {
+  color: #1e2022;
+}
 
 /*# sourceMappingURL=Cart.css.map */

@@ -8,6 +8,7 @@ import {useDispatch} from "react-redux"
 import {useEffect} from "react";
 import actions from "./actions";
 import {Cart} from "./component/Cart";
+import {Checkout} from "./component/Checkout";
 
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
                 <Route path="/shop" element={<Shop/>}/>
                 <Route path="/shop/:name" element={<Music/>}/>
                 <Route path="/" element={<Navigate to="/home" />}/>
-                <Route path="/cart" element={<Cart />} />
+                <Route path="/cart" element={<Cart/>} />
+                <Route path="/checkout" element={<Checkout/>} />
             </Routes>
         </div>
     );

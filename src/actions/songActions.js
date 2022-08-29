@@ -9,7 +9,7 @@ const fetchSongBegin = () => ({
 
 const fetchSongSuccess = data => ({
         type: actionType.FETCH_ALL_SONGS_SUCCESS,
-        payload: data.map(song => ({...song, cart: false, num: 0}))
+        payload: data.map(song => ({...song, cart: false, num: 0, subtotal: 0}))
 })
 
 const fetchSongFailure = error => ({
@@ -20,6 +20,11 @@ const fetchSongFailure = error => ({
 const addCart = (id, num) => ({
     type: actionType.ADD_CART,
     payload: {id, num}
+})
+
+const deleteCart = (id, num, cost) => ({
+    type: actionType.DELETE_CART,
+    payload: {id, num, cost}
 })
 
 
@@ -41,5 +46,6 @@ export default {
     fetchSongBegin,
     fetchSongSuccess,
     fetchSongFailure,
-    addCart
+    addCart,
+    deleteCart
 }
