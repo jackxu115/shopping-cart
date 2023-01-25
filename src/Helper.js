@@ -1,6 +1,7 @@
 
 
-export const URL = `http://course-data.mark2win.com/solo`
+export const URL = `https://imdb-api.com/en/API/MostPopularMovies/k_087m6ddkls`
+
 
 export const actionType = {
     'FETCH_ALL_SONGS_BEGIN' : 'FETCH_ALL_SONGS_BEGIN',

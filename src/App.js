@@ -22,16 +22,14 @@ function App() {
     return (
         <div className="App">
             <header>
-                <h1>Shopping Cart</h1>
+                <h1>Movie Library</h1>
                 <NavBar/>
             </header>
             <Routes>
                 <Route path="/home" element={<Home/>}/>
-                <Route path="/shop" element={<Shop/>}/>
-                <Route path="/shop/:name" element={<Music/>}/>
+                <Route path="/library" element={<Shop/>}/>
+                <Route path="/library/:name" element={<Music/>}/>
                 <Route path="/" element={<Navigate to="/home" />}/>
-                <Route path="/cart" element={<Cart/>} />
-                <Route path="/checkout" element={<Checkout/>} />
             </Routes>
         </div>
     );

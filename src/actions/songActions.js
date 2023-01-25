@@ -34,7 +34,9 @@ const fetchData = () => {
         dispatch(fetchSongBegin())
         try {
             const res = await axios.get(URL)
-            dispatch(fetchSongSuccess(res.data.data))
+            const {data: {items}} = res
+            console.log(items)
+            dispatch(fetchSongSuccess(items))
         } catch (err) {
             dispatch(fetchSongFailure(err))
         }

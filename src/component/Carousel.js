@@ -22,10 +22,10 @@ export const Carousel = () => {
         }
     }, [index])
 
-    console.log(songs[index]?.cover)
+    console.log(songs[index]?.image)
     return (
         <div className="Carousel">
-            {songs[index]?.cover && <img className="Image" src={`${songs[index]?.cover}`} alt=""/>}
+            {songs[index]?.image && <img className="Image" src={`${songs[index]?.image}`} alt=""/>}
         </div>
     )
 }
