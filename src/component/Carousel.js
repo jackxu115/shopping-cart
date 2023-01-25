@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 export const Carousel = () => {
 
     let songs = useSelector(state => state.songReducer.rawData)
-    console.log('songs', songs)
+    // console.log('songs', songs)
 
     const [index, setIndex] = useState(-1)
 
@@ -22,7 +22,7 @@ export const Carousel = () => {
         }
     }, [index])
 
-    console.log(songs[index]?.image)
+    // console.log(songs[index]?.image)
     return (
         <div className="Carousel">
             {songs[index]?.image && <img className="Image" src={`${songs[index]?.image}`} alt=""/>}

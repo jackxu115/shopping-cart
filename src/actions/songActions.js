@@ -35,6 +35,7 @@ const fetchData = () => {
         try {
             const res = await axios.get(URL)
             const {data: {items}} = res
+            console.log(res)
             console.log(items)
             dispatch(fetchSongSuccess(items))
         } catch (err) {

@@ -1,6 +1,6 @@
 
 
-export const URL = `https://imdb-api.com/en/API/MostPopularMovies/k_087m6ddkls`
+export const URL = `https://imdb-api.com/en/API/MostPopularMovies/k_087m6ddk`
 
 
 export const actionType = {
